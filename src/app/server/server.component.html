@@ -1,0 +1,38 @@
+<h2>This is my server component..</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+
+            <!-- data binding using using string interpolation  -->
+            <h3>this {{id}} user is {{isOnline}}</h3>
+        </div>
+        <div class="col-sm-6">
+            <!-- data binding using property binding [disabled]="disableSaveButton"-->
+            <!-- event binding (click)="getServerStatus()" -->
+            <button class="btn btn-danger" [disabled]="disableSaveButton" (click)="getServerStatus()">save
+            </button>
+
+            <small class="form-text text-muted">allow to click after 2 sec</small>
+        </div>
+    </div>
+    <div class="row">
+        <!-- this $event variable can retrive lot of data from the template -->
+        <div class="col-sm-6">
+            <input type="text" class="form-control" (input)="getEnterdDetails($event)">
+
+            <!--         
+        this is the way two way binding both direction comiunicates each other
+        template <==> typescript code
+         -->
+
+            <input type="text" class="form-control" [(ngModel)]="serverStatus">
+
+            <small class="text-muted">{{isOnline}}</small>
+            <hr>
+            <small class="text-muted">{{serverStatus}}</small>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-success">get data</button>
+        </div>
+    </div>
+</div>

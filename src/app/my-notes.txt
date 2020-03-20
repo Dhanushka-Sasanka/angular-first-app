@@ -1,0 +1,6 @@
+
+
+make a [(ngModel)] in a input field and set that field inside a h2 tag using data binding.
+
+adding bootstrap css framework to angular framework 
+

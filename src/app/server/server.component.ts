@@ -14,7 +14,9 @@ export class ServerComponent implements OnInit {
     id: number = 12;
     isOnline: string = 'online';
     disableSaveButton: boolean = true;
-    serverStatus:string = 'sever is full..';
+    serverStatus: string = 'sever is full..';
+    isClicked: boolean = false;
+    servers:string[] = ['test','test 2','test 3'];
 
     constructor() {
         console.log('sever constructer');
@@ -37,10 +39,25 @@ export class ServerComponent implements OnInit {
             this.isOnline = 'online';
         }
     }
-
+    // this method for get Event data from user input
     getEnterdDetails(event: Event) {
         console.log(event);
         this.serverStatus = (<HTMLInputElement>event.target).value;
         console.log(this.serverStatus);
     }
+    // this Test for *ngIf structrural directive 
+
+    isThisButtonClicked(): boolean {
+        return this.isClicked = true;
+
+    }
+
+    getColor(){
+         return this.isOnline == 'online'   ? 'red' : 'yellow';
+    }
+
+    createServer(){
+        this.servers.push('new server'+Math.random());
+    }
+
 }

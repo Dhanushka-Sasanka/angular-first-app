@@ -1,5 +1,9 @@
 <p>servers works!</p>
 
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<button (click)="createServer()">create a server</button>
+<app-server *ngFor="let server of servers">
+   
+</app-server>
+
+<!-- <app-server></app-server>
+<app-server></app-server> -->

@@ -35,4 +35,31 @@
             <button class="btn btn-success">get data</button>
         </div>
     </div>
+
+    <!-- this Test for *ngIf structrural directive -->
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row">
+                    <button class="btn btn-warning btnIsClick" (click)="isThisButtonClicked()">click</button>
+
+                    <div *ngIf="isClicked;else noserver" class="alert bg-danger text-white">User is click this button.!
+                    </div>
+
+                    <!-- this for else part for ngIF -->
+                    <ng-template #noserver>
+                        <div class="alert bg-primary text-white">Yet not clicked.!</div>
+                    </ng-template>
+                </div>
+                <div class="row">
+                    
+                    <p [ngStyle]="{backgroundColor:getColor()}">this server is {{ isOnline }}</p>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
 </div>

@@ -7,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  servers:string[] = ['test','test 2','test 3'];
+  servers: string[] = ['test'];
 
   constructor() {
     console.log('constructer servers');
-   }
+  }
 
   ngOnInit() {
     console.log('ngOnInit of servers');
   }
 
-  createServer(){
-    this.servers.push('new server'+Math.random());
-}
+  createServer() {
+    this.servers.push('new server' + Math.random());
+  }
 }

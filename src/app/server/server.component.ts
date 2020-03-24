@@ -16,7 +16,7 @@ export class ServerComponent implements OnInit {
     disableSaveButton: boolean = true;
     serverStatus: string = 'sever is full..';
     isClicked: boolean = false;
-    servers:string[] = ['test','test 2','test 3'];
+   
 
     constructor() {
         console.log('sever constructer');
@@ -56,8 +56,6 @@ export class ServerComponent implements OnInit {
          return this.isOnline == 'online'   ? 'red' : 'yellow';
     }
 
-    createServer(){
-        this.servers.push('new server'+Math.random());
-    }
+    
 
 }
